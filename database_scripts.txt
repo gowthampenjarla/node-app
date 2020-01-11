@@ -1,0 +1,101 @@
+use nodeapp
+
+db.createCollection('products')
+
+db.createCollection('categories')
+
+db.categories.insertMany([
+  {
+    category: 'Technology',
+    date: Date()
+  },
+  {
+    category: 'News',
+    date: Date()
+  },
+  {
+    category: 'Entertainment',
+    date: Date()
+  },
+    {
+    category: 'Political',
+    date: Date()
+  },
+])
+
+db.products.insertMany([
+ {
+    category: 'Technology',
+    product: 'Apple',
+  },
+   {
+    category: 'Technology',
+    product: 'Samsung',
+  },
+   {
+    category: 'Technology',
+    product: 'Lenovo',
+  },
+   {
+    category: 'Technology',
+    product: 'Asus',
+  },
+])
+
+db.products.insertMany([
+ {
+    category: 'News',
+    product: 'CVR',
+  },
+   {
+    category: 'News',
+    product: 'TV9',
+  },
+   {
+    category: 'News',
+    product: 'CNBC',
+  },
+   {
+    category: 'News',
+    product: 'Fox',
+  },
+])
+
+db.products.insertMany([
+ {
+    category: 'Entertainment',
+    product: 'Pulp Fiction',
+  },
+   {
+    category: 'Entertainment',
+    product: 'Django Unchained',
+  },
+   {
+    category: 'Entertainment',
+    product: 'Interstellar',
+  },
+   {
+    category: 'Entertainment',
+    product: 'The Dark Knight',
+  },
+])
+
+db.products.insertMany([
+ {
+    category: 'Political',
+    product: 'Narendra Modi',
+  },
+   {
+    category: 'Political',
+    product: 'Donald Trump',
+  },
+   {
+    category: 'Political',
+    product: 'Barrack Obama',
+  },
+   {
+    category: 'Political',
+    product: 'Xi Jinping'
+  },
+])
+

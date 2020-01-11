@@ -1,0 +1,29 @@
+<div class="container">
+  <flash-messages></flash-messages>
+  <div class="card card-body mt-4" *ngIf="showcat">
+    <h5 class="card-title">Categories</h5>
+    <div class="list-group">
+      <div class="list-group-item d-flex justify-content-between align-items-center"
+        *ngFor="let category of categoryList">
+        <a (click)='onSelect(category.category)' href="#">{{category.category}}</a>
+        <!-- <span class="log-date">{{category.date | date: 'medium'}}</span> -->
+        <button class="btn btn-danger" (click)="onDelete(category.category)">X</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-4" *ngIf="showProduct">
+  <div class="card card-body">
+    <h5 class="card-title">Products</h5>
+    <div class="list-group">
+      <div class="list-group-item" *ngFor="let product of productList">
+        {{product.product}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- routerLink="/category/{{category.category}}"
+routerLinkActive="router-link-active" -->
